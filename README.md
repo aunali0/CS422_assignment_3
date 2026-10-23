@@ -90,4 +90,4 @@ traffic, while `sudo ./loader` keeps the controller registered. Python exposes
 under `results/` and no silent algorithm substitution.
 
 AI assistance was used for implementation, tests, automation, plots, and draft
-text. The team remains responsible for understanding and explaining the work.
+text.
