@@ -1,0 +1,1121 @@
+{
+  "run_id": "step10-final-20261023T051713Z",
+  "environment": {
+    "kernel": "6.18.33.2-microsoft-standard-WSL2",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "algorithms": {
+      "cubic": "cubic",
+      "reno": "reno",
+      "bbr": "bbr",
+      "a3_cc": "a3_cc"
+    },
+    "python": "3.14.8",
+    "dependencies": {
+      "matplotlib": "3.11.2",
+      "pydantic": "2.14.1"
+    }
+  },
+  "config": {
+    "duration": 10,
+    "print_interval": 5.0,
+    "goodput_interval": 0.2,
+    "connect_timeout": 5.0,
+    "control_timeout": 3.0,
+    "data_timeout": 3.0,
+    "algorithm": null
+  },
+  "algorithms": [
+    "cubic",
+    "reno",
+    "bbr",
+    "a3_cc"
+  ],
+  "repetitions": 3,
+  "seed": 422,
+  "pause_s": 2.0,
+  "requested_destinations": 3,
+  "max_candidates": 9,
+  "candidates": [
+    {
+      "host": "dal.speedtest.clouvider.net",
+      "port": 5200
+    },
+    {
+      "host": "185.152.66.67",
+      "port": 5201
+    },
+    {
+      "host": "a110.speedtest.wobcom.de",
+      "port": 5201
+    },
+    {
+      "host": "speedtest.wdc2.us.leaseweb.net",
+      "port": 5201
+    },
+    {
+      "host": "nl.speed.vps1.net",
+      "port": 5201
+    },
+    {
+      "host": "speed.netfiber.net.il",
+      "port": 5201
+    },
+    {
+      "host": "iperf.pendc.com",
+      "port": 5201
+    },
+    {
+      "host": "96.45.41.167",
+      "port": 30001
+    },
+    {
+      "host": "speedtest.syd12.au.leaseweb.net",
+      "port": 5201
+    }
+  ],
+  "order_method": "seeded initial shuffle; rotate by repetition and candidate index",
+  "selected_destinations": [
+    "dal.speedtest.clouvider.net:5200",
+    "185.152.66.67:5201",
+    "96.45.41.167:30001"
+  ],
+  "representative": "dal.speedtest.clouvider.net:5200",
+  "tests": [
+    {
+      "destination": "dal.speedtest.clouvider.net:5200",
+      "repetition": 1,
+      "requested_algorithm": "reno",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d1-r1-reno",
+      "started_at_unix_s": 1792732772.7696476,
+      "finished_at_unix_s": 1792732783.2377887,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d1-r1-reno_dal.speedtest.clouvider.net_5200/tcp-samples.csv",
+      "actual_algorithm": "reno"
+    },
+    {
+      "destination": "dal.speedtest.clouvider.net:5200",
+      "repetition": 1,
+      "requested_algorithm": "cubic",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d1-r1-cubic",
+      "started_at_unix_s": 1792732785.2396216,
+      "finished_at_unix_s": 1792732795.6491082,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d1-r1-cubic_dal.speedtest.clouvider.net_5200/tcp-samples.csv",
+      "actual_algorithm": "cubic"
+    },
+    {
+      "destination": "dal.speedtest.clouvider.net:5200",
+      "repetition": 1,
+      "requested_algorithm": "bbr",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d1-r1-bbr",
+      "started_at_unix_s": 1792732797.650868,
+      "finished_at_unix_s": 1792732808.0404122,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d1-r1-bbr_dal.speedtest.clouvider.net_5200/tcp-samples.csv",
+      "actual_algorithm": "bbr"
+    },
+    {
+      "destination": "dal.speedtest.clouvider.net:5200",
+      "repetition": 1,
+      "requested_algorithm": "a3_cc",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d1-r1-a3_cc",
+      "started_at_unix_s": 1792732810.041954,
+      "finished_at_unix_s": 1792732820.405357,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d1-r1-a3_cc_dal.speedtest.clouvider.net_5200/tcp-samples.csv",
+      "actual_algorithm": "a3_cc"
+    },
+    {
+      "destination": "dal.speedtest.clouvider.net:5200",
+      "repetition": 2,
+      "requested_algorithm": "cubic",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d1-r2-cubic",
+      "started_at_unix_s": 1792732822.4071813,
+      "finished_at_unix_s": 1792732832.8000414,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d1-r2-cubic_dal.speedtest.clouvider.net_5200/tcp-samples.csv",
+      "actual_algorithm": "cubic"
+    },
+    {
+      "destination": "dal.speedtest.clouvider.net:5200",
+      "repetition": 2,
+      "requested_algorithm": "bbr",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d1-r2-bbr",
+      "started_at_unix_s": 1792732834.801516,
+      "finished_at_unix_s": 1792732845.2210724,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d1-r2-bbr_dal.speedtest.clouvider.net_5200/tcp-samples.csv",
+      "actual_algorithm": "bbr"
+    },
+    {
+      "destination": "dal.speedtest.clouvider.net:5200",
+      "repetition": 2,
+      "requested_algorithm": "a3_cc",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d1-r2-a3_cc",
+      "started_at_unix_s": 1792732847.2226326,
+      "finished_at_unix_s": 1792732857.5978715,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d1-r2-a3_cc_dal.speedtest.clouvider.net_5200/tcp-samples.csv",
+      "actual_algorithm": "a3_cc"
+    },
+    {
+      "destination": "dal.speedtest.clouvider.net:5200",
+      "repetition": 2,
+      "requested_algorithm": "reno",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d1-r2-reno",
+      "started_at_unix_s": 1792732859.5995028,
+      "finished_at_unix_s": 1792732870.0408576,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d1-r2-reno_dal.speedtest.clouvider.net_5200/tcp-samples.csv",
+      "actual_algorithm": "reno"
+    },
+    {
+      "destination": "dal.speedtest.clouvider.net:5200",
+      "repetition": 3,
+      "requested_algorithm": "bbr",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d1-r3-bbr",
+      "started_at_unix_s": 1792732872.0424888,
+      "finished_at_unix_s": 1792732882.518324,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d1-r3-bbr_dal.speedtest.clouvider.net_5200/tcp-samples.csv",
+      "actual_algorithm": "bbr"
+    },
+    {
+      "destination": "dal.speedtest.clouvider.net:5200",
+      "repetition": 3,
+      "requested_algorithm": "a3_cc",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d1-r3-a3_cc",
+      "started_at_unix_s": 1792732884.5218613,
+      "finished_at_unix_s": 1792732894.9097776,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d1-r3-a3_cc_dal.speedtest.clouvider.net_5200/tcp-samples.csv",
+      "actual_algorithm": "a3_cc"
+    },
+    {
+      "destination": "dal.speedtest.clouvider.net:5200",
+      "repetition": 3,
+      "requested_algorithm": "reno",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d1-r3-reno",
+      "started_at_unix_s": 1792732896.9122746,
+      "finished_at_unix_s": 1792732907.309139,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d1-r3-reno_dal.speedtest.clouvider.net_5200/tcp-samples.csv",
+      "actual_algorithm": "reno"
+    },
+    {
+      "destination": "dal.speedtest.clouvider.net:5200",
+      "repetition": 3,
+      "requested_algorithm": "cubic",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d1-r3-cubic",
+      "started_at_unix_s": 1792732909.3117938,
+      "finished_at_unix_s": 1792732919.6780267,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d1-r3-cubic_dal.speedtest.clouvider.net_5200/tcp-samples.csv",
+      "actual_algorithm": "cubic"
+    },
+    {
+      "destination": "185.152.66.67:5201",
+      "repetition": 1,
+      "requested_algorithm": "cubic",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d2-r1-cubic",
+      "started_at_unix_s": 1792732921.6817005,
+      "finished_at_unix_s": 1792732931.9055874,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d2-r1-cubic_185.152.66.67_5201/tcp-samples.csv",
+      "actual_algorithm": "cubic"
+    },
+    {
+      "destination": "185.152.66.67:5201",
+      "repetition": 1,
+      "requested_algorithm": "bbr",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d2-r1-bbr",
+      "started_at_unix_s": 1792732933.9070997,
+      "finished_at_unix_s": 1792732944.1669228,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d2-r1-bbr_185.152.66.67_5201/tcp-samples.csv",
+      "actual_algorithm": "bbr"
+    },
+    {
+      "destination": "185.152.66.67:5201",
+      "repetition": 1,
+      "requested_algorithm": "a3_cc",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d2-r1-a3_cc",
+      "started_at_unix_s": 1792732946.1696577,
+      "finished_at_unix_s": 1792732956.3876987,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d2-r1-a3_cc_185.152.66.67_5201/tcp-samples.csv",
+      "actual_algorithm": "a3_cc"
+    },
+    {
+      "destination": "185.152.66.67:5201",
+      "repetition": 1,
+      "requested_algorithm": "reno",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d2-r1-reno",
+      "started_at_unix_s": 1792732958.391214,
+      "finished_at_unix_s": 1792732968.6810117,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d2-r1-reno_185.152.66.67_5201/tcp-samples.csv",
+      "actual_algorithm": "reno"
+    },
+    {
+      "destination": "185.152.66.67:5201",
+      "repetition": 2,
+      "requested_algorithm": "bbr",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d2-r2-bbr",
+      "started_at_unix_s": 1792732970.683232,
+      "finished_at_unix_s": 1792732980.9434204,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d2-r2-bbr_185.152.66.67_5201/tcp-samples.csv",
+      "actual_algorithm": "bbr"
+    },
+    {
+      "destination": "185.152.66.67:5201",
+      "repetition": 2,
+      "requested_algorithm": "a3_cc",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d2-r2-a3_cc",
+      "started_at_unix_s": 1792732982.944945,
+      "finished_at_unix_s": 1792732993.2111301,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d2-r2-a3_cc_185.152.66.67_5201/tcp-samples.csv",
+      "actual_algorithm": "a3_cc"
+    },
+    {
+      "destination": "185.152.66.67:5201",
+      "repetition": 2,
+      "requested_algorithm": "reno",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d2-r2-reno",
+      "started_at_unix_s": 1792732995.212656,
+      "finished_at_unix_s": 1792733005.4513595,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d2-r2-reno_185.152.66.67_5201/tcp-samples.csv",
+      "actual_algorithm": "reno"
+    },
+    {
+      "destination": "185.152.66.67:5201",
+      "repetition": 2,
+      "requested_algorithm": "cubic",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d2-r2-cubic",
+      "started_at_unix_s": 1792733007.4530742,
+      "finished_at_unix_s": 1792733017.703678,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d2-r2-cubic_185.152.66.67_5201/tcp-samples.csv",
+      "actual_algorithm": "cubic"
+    },
+    {
+      "destination": "185.152.66.67:5201",
+      "repetition": 3,
+      "requested_algorithm": "a3_cc",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d2-r3-a3_cc",
+      "started_at_unix_s": 1792733019.7053256,
+      "finished_at_unix_s": 1792733029.9224782,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d2-r3-a3_cc_185.152.66.67_5201/tcp-samples.csv",
+      "actual_algorithm": "a3_cc"
+    },
+    {
+      "destination": "185.152.66.67:5201",
+      "repetition": 3,
+      "requested_algorithm": "reno",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d2-r3-reno",
+      "started_at_unix_s": 1792733031.9241772,
+      "finished_at_unix_s": 1792733042.1396887,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d2-r3-reno_185.152.66.67_5201/tcp-samples.csv",
+      "actual_algorithm": "reno"
+    },
+    {
+      "destination": "185.152.66.67:5201",
+      "repetition": 3,
+      "requested_algorithm": "cubic",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d2-r3-cubic",
+      "started_at_unix_s": 1792733044.1414974,
+      "finished_at_unix_s": 1792733054.3916051,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d2-r3-cubic_185.152.66.67_5201/tcp-samples.csv",
+      "actual_algorithm": "cubic"
+    },
+    {
+      "destination": "185.152.66.67:5201",
+      "repetition": 3,
+      "requested_algorithm": "bbr",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d2-r3-bbr",
+      "started_at_unix_s": 1792733056.3932118,
+      "finished_at_unix_s": 1792733066.6378157,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d2-r3-bbr_185.152.66.67_5201/tcp-samples.csv",
+      "actual_algorithm": "bbr"
+    },
+    {
+      "destination": "a110.speedtest.wobcom.de:5201",
+      "repetition": 1,
+      "requested_algorithm": "bbr",
+      "status": "failed",
+      "run_id": "step10-final-20261023T051713Z-d3-r1-bbr",
+      "started_at_unix_s": 1792733068.6441047,
+      "finished_at_unix_s": 1792733069.346254,
+      "reason": "See experiment.log"
+    },
+    {
+      "destination": "a110.speedtest.wobcom.de:5201",
+      "repetition": 1,
+      "requested_algorithm": "a3_cc",
+      "status": "failed",
+      "run_id": "step10-final-20261023T051713Z-d3-r1-a3_cc",
+      "started_at_unix_s": 1792733071.3467963,
+      "finished_at_unix_s": 1792733071.6064842,
+      "reason": "See experiment.log"
+    },
+    {
+      "destination": "a110.speedtest.wobcom.de:5201",
+      "repetition": 1,
+      "requested_algorithm": "reno",
+      "status": "failed",
+      "run_id": "step10-final-20261023T051713Z-d3-r1-reno",
+      "started_at_unix_s": 1792733073.6089299,
+      "finished_at_unix_s": 1792733074.1089978,
+      "reason": "See experiment.log"
+    },
+    {
+      "destination": "a110.speedtest.wobcom.de:5201",
+      "repetition": 1,
+      "requested_algorithm": "cubic",
+      "status": "failed",
+      "run_id": "step10-final-20261023T051713Z-d3-r1-cubic",
+      "started_at_unix_s": 1792733076.1097796,
+      "finished_at_unix_s": 1792733076.7527819,
+      "reason": "See experiment.log"
+    },
+    {
+      "destination": "a110.speedtest.wobcom.de:5201",
+      "repetition": 2,
+      "requested_algorithm": "a3_cc",
+      "status": "failed",
+      "run_id": "step10-final-20261023T051713Z-d3-r2-a3_cc",
+      "started_at_unix_s": 1792733078.7532203,
+      "finished_at_unix_s": 1792733079.0334878,
+      "reason": "See experiment.log"
+    },
+    {
+      "destination": "a110.speedtest.wobcom.de:5201",
+      "repetition": 2,
+      "requested_algorithm": "reno",
+      "status": "failed",
+      "run_id": "step10-final-20261023T051713Z-d3-r2-reno",
+      "started_at_unix_s": 1792733081.0341327,
+      "finished_at_unix_s": 1792733081.3046653,
+      "reason": "See experiment.log"
+    },
+    {
+      "destination": "a110.speedtest.wobcom.de:5201",
+      "repetition": 2,
+      "requested_algorithm": "cubic",
+      "status": "failed",
+      "run_id": "step10-final-20261023T051713Z-d3-r2-cubic",
+      "started_at_unix_s": 1792733083.305304,
+      "finished_at_unix_s": 1792733083.610899,
+      "reason": "See experiment.log"
+    },
+    {
+      "destination": "a110.speedtest.wobcom.de:5201",
+      "repetition": 2,
+      "requested_algorithm": "bbr",
+      "status": "failed",
+      "run_id": "step10-final-20261023T051713Z-d3-r2-bbr",
+      "started_at_unix_s": 1792733085.6113431,
+      "finished_at_unix_s": 1792733085.8845227,
+      "reason": "See experiment.log"
+    },
+    {
+      "destination": "a110.speedtest.wobcom.de:5201",
+      "repetition": 3,
+      "requested_algorithm": "reno",
+      "status": "failed",
+      "run_id": "step10-final-20261023T051713Z-d3-r3-reno",
+      "started_at_unix_s": 1792733087.885057,
+      "finished_at_unix_s": 1792733088.176825,
+      "reason": "See experiment.log"
+    },
+    {
+      "destination": "a110.speedtest.wobcom.de:5201",
+      "repetition": 3,
+      "requested_algorithm": "cubic",
+      "status": "failed",
+      "run_id": "step10-final-20261023T051713Z-d3-r3-cubic",
+      "started_at_unix_s": 1792733090.1773858,
+      "finished_at_unix_s": 1792733090.5462937,
+      "reason": "See experiment.log"
+    },
+    {
+      "destination": "a110.speedtest.wobcom.de:5201",
+      "repetition": 3,
+      "requested_algorithm": "bbr",
+      "status": "failed",
+      "run_id": "step10-final-20261023T051713Z-d3-r3-bbr",
+      "started_at_unix_s": 1792733092.5469794,
+      "finished_at_unix_s": 1792733092.9473462,
+      "reason": "See experiment.log"
+    },
+    {
+      "destination": "a110.speedtest.wobcom.de:5201",
+      "repetition": 3,
+      "requested_algorithm": "a3_cc",
+      "status": "failed",
+      "run_id": "step10-final-20261023T051713Z-d3-r3-a3_cc",
+      "started_at_unix_s": 1792733094.9478648,
+      "finished_at_unix_s": 1792733095.2112193,
+      "reason": "See experiment.log"
+    },
+    {
+      "destination": "speedtest.wdc2.us.leaseweb.net:5201",
+      "repetition": 1,
+      "requested_algorithm": "a3_cc",
+      "status": "failed",
+      "run_id": "step10-final-20261023T051713Z-d4-r1-a3_cc",
+      "started_at_unix_s": 1792733097.2136824,
+      "finished_at_unix_s": 1792733097.6490672,
+      "reason": "See experiment.log"
+    },
+    {
+      "destination": "speedtest.wdc2.us.leaseweb.net:5201",
+      "repetition": 1,
+      "requested_algorithm": "reno",
+      "status": "failed",
+      "run_id": "step10-final-20261023T051713Z-d4-r1-reno",
+      "started_at_unix_s": 1792733099.6497436,
+      "finished_at_unix_s": 1792733100.083339,
+      "reason": "See experiment.log"
+    },
+    {
+      "destination": "speedtest.wdc2.us.leaseweb.net:5201",
+      "repetition": 1,
+      "requested_algorithm": "cubic",
+      "status": "failed",
+      "run_id": "step10-final-20261023T051713Z-d4-r1-cubic",
+      "started_at_unix_s": 1792733102.0840757,
+      "finished_at_unix_s": 1792733102.152957,
+      "reason": "See experiment.log"
+    },
+    {
+      "destination": "speedtest.wdc2.us.leaseweb.net:5201",
+      "repetition": 1,
+      "requested_algorithm": "bbr",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d4-r1-bbr",
+      "started_at_unix_s": 1792733104.153581,
+      "finished_at_unix_s": 1792733114.5361037,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d4-r1-bbr_speedtest.wdc2.us.leaseweb.net_5201/tcp-samples.csv",
+      "actual_algorithm": "bbr"
+    },
+    {
+      "destination": "speedtest.wdc2.us.leaseweb.net:5201",
+      "repetition": 2,
+      "requested_algorithm": "reno",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d4-r2-reno",
+      "started_at_unix_s": 1792733116.5382147,
+      "finished_at_unix_s": 1792733126.8056679,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d4-r2-reno_speedtest.wdc2.us.leaseweb.net_5201/tcp-samples.csv",
+      "actual_algorithm": "reno"
+    },
+    {
+      "destination": "speedtest.wdc2.us.leaseweb.net:5201",
+      "repetition": 2,
+      "requested_algorithm": "cubic",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d4-r2-cubic",
+      "started_at_unix_s": 1792733128.8073199,
+      "finished_at_unix_s": 1792733139.1222084,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d4-r2-cubic_speedtest.wdc2.us.leaseweb.net_5201/tcp-samples.csv",
+      "actual_algorithm": "cubic"
+    },
+    {
+      "destination": "speedtest.wdc2.us.leaseweb.net:5201",
+      "repetition": 2,
+      "requested_algorithm": "bbr",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d4-r2-bbr",
+      "started_at_unix_s": 1792733141.1240234,
+      "finished_at_unix_s": 1792733151.3998837,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d4-r2-bbr_speedtest.wdc2.us.leaseweb.net_5201/tcp-samples.csv",
+      "actual_algorithm": "bbr"
+    },
+    {
+      "destination": "speedtest.wdc2.us.leaseweb.net:5201",
+      "repetition": 2,
+      "requested_algorithm": "a3_cc",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d4-r2-a3_cc",
+      "started_at_unix_s": 1792733153.4016669,
+      "finished_at_unix_s": 1792733163.6310406,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d4-r2-a3_cc_speedtest.wdc2.us.leaseweb.net_5201/tcp-samples.csv",
+      "actual_algorithm": "a3_cc"
+    },
+    {
+      "destination": "speedtest.wdc2.us.leaseweb.net:5201",
+      "repetition": 3,
+      "requested_algorithm": "cubic",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d4-r3-cubic",
+      "started_at_unix_s": 1792733165.632802,
+      "finished_at_unix_s": 1792733175.9170377,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d4-r3-cubic_speedtest.wdc2.us.leaseweb.net_5201/tcp-samples.csv",
+      "actual_algorithm": "cubic"
+    },
+    {
+      "destination": "speedtest.wdc2.us.leaseweb.net:5201",
+      "repetition": 3,
+      "requested_algorithm": "bbr",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d4-r3-bbr",
+      "started_at_unix_s": 1792733177.918725,
+      "finished_at_unix_s": 1792733188.1912243,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d4-r3-bbr_speedtest.wdc2.us.leaseweb.net_5201/tcp-samples.csv",
+      "actual_algorithm": "bbr"
+    },
+    {
+      "destination": "speedtest.wdc2.us.leaseweb.net:5201",
+      "repetition": 3,
+      "requested_algorithm": "a3_cc",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d4-r3-a3_cc",
+      "started_at_unix_s": 1792733190.193262,
+      "finished_at_unix_s": 1792733200.4217603,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d4-r3-a3_cc_speedtest.wdc2.us.leaseweb.net_5201/tcp-samples.csv",
+      "actual_algorithm": "a3_cc"
+    },
+    {
+      "destination": "speedtest.wdc2.us.leaseweb.net:5201",
+      "repetition": 3,
+      "requested_algorithm": "reno",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d4-r3-reno",
+      "started_at_unix_s": 1792733202.4233987,
+      "finished_at_unix_s": 1792733212.695334,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d4-r3-reno_speedtest.wdc2.us.leaseweb.net_5201/tcp-samples.csv",
+      "actual_algorithm": "reno"
+    },
+    {
+      "destination": "nl.speed.vps1.net:5201",
+      "repetition": 1,
+      "requested_algorithm": "reno",
+      "status": "failed",
+      "run_id": "step10-final-20261023T051713Z-d5-r1-reno",
+      "started_at_unix_s": 1792733214.6995595,
+      "finished_at_unix_s": 1792733228.712797,
+      "reason": "See experiment.log"
+    },
+    {
+      "destination": "nl.speed.vps1.net:5201",
+      "repetition": 1,
+      "requested_algorithm": "cubic",
+      "status": "failed",
+      "run_id": "step10-final-20261023T051713Z-d5-r1-cubic",
+      "started_at_unix_s": 1792733230.7132485,
+      "finished_at_unix_s": 1792733244.7098732,
+      "reason": "See experiment.log"
+    },
+    {
+      "destination": "nl.speed.vps1.net:5201",
+      "repetition": 1,
+      "requested_algorithm": "bbr",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d5-r1-bbr",
+      "started_at_unix_s": 1792733246.7103083,
+      "finished_at_unix_s": 1792733257.7903812,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d5-r1-bbr_nl.speed.vps1.net_5201/tcp-samples.csv",
+      "actual_algorithm": "bbr"
+    },
+    {
+      "destination": "nl.speed.vps1.net:5201",
+      "repetition": 1,
+      "requested_algorithm": "a3_cc",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d5-r1-a3_cc",
+      "started_at_unix_s": 1792733259.792103,
+      "finished_at_unix_s": 1792733271.33491,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d5-r1-a3_cc_nl.speed.vps1.net_5201/tcp-samples.csv",
+      "actual_algorithm": "a3_cc"
+    },
+    {
+      "destination": "nl.speed.vps1.net:5201",
+      "repetition": 2,
+      "requested_algorithm": "cubic",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d5-r2-cubic",
+      "started_at_unix_s": 1792733273.3381455,
+      "finished_at_unix_s": 1792733284.4354644,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d5-r2-cubic_nl.speed.vps1.net_5201/tcp-samples.csv",
+      "actual_algorithm": "cubic"
+    },
+    {
+      "destination": "nl.speed.vps1.net:5201",
+      "repetition": 2,
+      "requested_algorithm": "bbr",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d5-r2-bbr",
+      "started_at_unix_s": 1792733286.4377363,
+      "finished_at_unix_s": 1792733297.5273995,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d5-r2-bbr_nl.speed.vps1.net_5201/tcp-samples.csv",
+      "actual_algorithm": "bbr"
+    },
+    {
+      "destination": "nl.speed.vps1.net:5201",
+      "repetition": 2,
+      "requested_algorithm": "a3_cc",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d5-r2-a3_cc",
+      "started_at_unix_s": 1792733299.5308225,
+      "finished_at_unix_s": 1792733310.6122086,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d5-r2-a3_cc_nl.speed.vps1.net_5201/tcp-samples.csv",
+      "actual_algorithm": "a3_cc"
+    },
+    {
+      "destination": "nl.speed.vps1.net:5201",
+      "repetition": 2,
+      "requested_algorithm": "reno",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d5-r2-reno",
+      "started_at_unix_s": 1792733312.614601,
+      "finished_at_unix_s": 1792733323.7516556,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d5-r2-reno_nl.speed.vps1.net_5201/tcp-samples.csv",
+      "actual_algorithm": "reno"
+    },
+    {
+      "destination": "nl.speed.vps1.net:5201",
+      "repetition": 3,
+      "requested_algorithm": "bbr",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d5-r3-bbr",
+      "started_at_unix_s": 1792733325.7535481,
+      "finished_at_unix_s": 1792733336.8700101,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d5-r3-bbr_nl.speed.vps1.net_5201/tcp-samples.csv",
+      "actual_algorithm": "bbr"
+    },
+    {
+      "destination": "nl.speed.vps1.net:5201",
+      "repetition": 3,
+      "requested_algorithm": "a3_cc",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d5-r3-a3_cc",
+      "started_at_unix_s": 1792733338.8715043,
+      "finished_at_unix_s": 1792733349.9987628,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d5-r3-a3_cc_nl.speed.vps1.net_5201/tcp-samples.csv",
+      "actual_algorithm": "a3_cc"
+    },
+    {
+      "destination": "nl.speed.vps1.net:5201",
+      "repetition": 3,
+      "requested_algorithm": "reno",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d5-r3-reno",
+      "started_at_unix_s": 1792733352.002001,
+      "finished_at_unix_s": 1792733363.1433468,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d5-r3-reno_nl.speed.vps1.net_5201/tcp-samples.csv",
+      "actual_algorithm": "reno"
+    },
+    {
+      "destination": "nl.speed.vps1.net:5201",
+      "repetition": 3,
+      "requested_algorithm": "cubic",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d5-r3-cubic",
+      "started_at_unix_s": 1792733365.1455503,
+      "finished_at_unix_s": 1792733376.2160254,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d5-r3-cubic_nl.speed.vps1.net_5201/tcp-samples.csv",
+      "actual_algorithm": "cubic"
+    },
+    {
+      "destination": "speed.netfiber.net.il:5201",
+      "repetition": 1,
+      "requested_algorithm": "cubic",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d6-r1-cubic",
+      "started_at_unix_s": 1792733378.2213013,
+      "finished_at_unix_s": 1792733389.5019605,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d6-r1-cubic_speed.netfiber.net.il_5201/tcp-samples.csv",
+      "actual_algorithm": "cubic"
+    },
+    {
+      "destination": "speed.netfiber.net.il:5201",
+      "repetition": 1,
+      "requested_algorithm": "bbr",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d6-r1-bbr",
+      "started_at_unix_s": 1792733391.5046847,
+      "finished_at_unix_s": 1792733402.8515098,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d6-r1-bbr_speed.netfiber.net.il_5201/tcp-samples.csv",
+      "actual_algorithm": "bbr"
+    },
+    {
+      "destination": "speed.netfiber.net.il:5201",
+      "repetition": 1,
+      "requested_algorithm": "a3_cc",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d6-r1-a3_cc",
+      "started_at_unix_s": 1792733404.8533788,
+      "finished_at_unix_s": 1792733416.0518897,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d6-r1-a3_cc_speed.netfiber.net.il_5201/tcp-samples.csv",
+      "actual_algorithm": "a3_cc"
+    },
+    {
+      "destination": "speed.netfiber.net.il:5201",
+      "repetition": 1,
+      "requested_algorithm": "reno",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d6-r1-reno",
+      "started_at_unix_s": 1792733418.0534263,
+      "finished_at_unix_s": 1792733429.3265147,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d6-r1-reno_speed.netfiber.net.il_5201/tcp-samples.csv",
+      "actual_algorithm": "reno"
+    },
+    {
+      "destination": "speed.netfiber.net.il:5201",
+      "repetition": 2,
+      "requested_algorithm": "bbr",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d6-r2-bbr",
+      "started_at_unix_s": 1792733431.3293786,
+      "finished_at_unix_s": 1792733442.5849066,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d6-r2-bbr_speed.netfiber.net.il_5201/tcp-samples.csv",
+      "actual_algorithm": "bbr"
+    },
+    {
+      "destination": "speed.netfiber.net.il:5201",
+      "repetition": 2,
+      "requested_algorithm": "a3_cc",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d6-r2-a3_cc",
+      "started_at_unix_s": 1792733444.5865679,
+      "finished_at_unix_s": 1792733455.9125838,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d6-r2-a3_cc_speed.netfiber.net.il_5201/tcp-samples.csv",
+      "actual_algorithm": "a3_cc"
+    },
+    {
+      "destination": "speed.netfiber.net.il:5201",
+      "repetition": 2,
+      "requested_algorithm": "reno",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d6-r2-reno",
+      "started_at_unix_s": 1792733457.9146311,
+      "finished_at_unix_s": 1792733469.1855621,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d6-r2-reno_speed.netfiber.net.il_5201/tcp-samples.csv",
+      "actual_algorithm": "reno"
+    },
+    {
+      "destination": "speed.netfiber.net.il:5201",
+      "repetition": 2,
+      "requested_algorithm": "cubic",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d6-r2-cubic",
+      "started_at_unix_s": 1792733471.1875317,
+      "finished_at_unix_s": 1792733482.4507878,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d6-r2-cubic_speed.netfiber.net.il_5201/tcp-samples.csv",
+      "actual_algorithm": "cubic"
+    },
+    {
+      "destination": "speed.netfiber.net.il:5201",
+      "repetition": 3,
+      "requested_algorithm": "a3_cc",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d6-r3-a3_cc",
+      "started_at_unix_s": 1792733484.4543552,
+      "finished_at_unix_s": 1792733495.6960545,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d6-r3-a3_cc_speed.netfiber.net.il_5201/tcp-samples.csv",
+      "actual_algorithm": "a3_cc"
+    },
+    {
+      "destination": "speed.netfiber.net.il:5201",
+      "repetition": 3,
+      "requested_algorithm": "reno",
+      "status": "failed",
+      "run_id": "step10-final-20261023T051713Z-d6-r3-reno",
+      "started_at_unix_s": 1792733497.6998675,
+      "finished_at_unix_s": 1792733498.0538542,
+      "reason": "See experiment.log"
+    },
+    {
+      "destination": "speed.netfiber.net.il:5201",
+      "repetition": 3,
+      "requested_algorithm": "cubic",
+      "status": "failed",
+      "run_id": "step10-final-20261023T051713Z-d6-r3-cubic",
+      "started_at_unix_s": 1792733500.0546238,
+      "finished_at_unix_s": 1792733500.4515774,
+      "reason": "See experiment.log"
+    },
+    {
+      "destination": "speed.netfiber.net.il:5201",
+      "repetition": 3,
+      "requested_algorithm": "bbr",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d6-r3-bbr",
+      "started_at_unix_s": 1792733502.452237,
+      "finished_at_unix_s": 1792733513.6973233,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d6-r3-bbr_speed.netfiber.net.il_5201/tcp-samples.csv",
+      "actual_algorithm": "bbr"
+    },
+    {
+      "destination": "iperf.pendc.com:5201",
+      "repetition": 1,
+      "requested_algorithm": "bbr",
+      "status": "failed",
+      "run_id": "step10-final-20261023T051713Z-d7-r1-bbr",
+      "started_at_unix_s": 1792733515.7016492,
+      "finished_at_unix_s": 1792733529.7689917,
+      "reason": "See experiment.log"
+    },
+    {
+      "destination": "iperf.pendc.com:5201",
+      "repetition": 1,
+      "requested_algorithm": "a3_cc",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d7-r1-a3_cc",
+      "started_at_unix_s": 1792733531.7694886,
+      "finished_at_unix_s": 1792733543.3472836,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d7-r1-a3_cc_iperf.pendc.com_5201/tcp-samples.csv",
+      "actual_algorithm": "a3_cc"
+    },
+    {
+      "destination": "iperf.pendc.com:5201",
+      "repetition": 1,
+      "requested_algorithm": "reno",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d7-r1-reno",
+      "started_at_unix_s": 1792733545.349263,
+      "finished_at_unix_s": 1792733556.932539,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d7-r1-reno_iperf.pendc.com_5201/tcp-samples.csv",
+      "actual_algorithm": "reno"
+    },
+    {
+      "destination": "iperf.pendc.com:5201",
+      "repetition": 1,
+      "requested_algorithm": "cubic",
+      "status": "failed",
+      "run_id": "step10-final-20261023T051713Z-d7-r1-cubic",
+      "started_at_unix_s": 1792733558.9348695,
+      "finished_at_unix_s": 1792733572.925903,
+      "reason": "See experiment.log"
+    },
+    {
+      "destination": "iperf.pendc.com:5201",
+      "repetition": 2,
+      "requested_algorithm": "a3_cc",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d7-r2-a3_cc",
+      "started_at_unix_s": 1792733574.926407,
+      "finished_at_unix_s": 1792733586.4682744,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d7-r2-a3_cc_iperf.pendc.com_5201/tcp-samples.csv",
+      "actual_algorithm": "a3_cc"
+    },
+    {
+      "destination": "iperf.pendc.com:5201",
+      "repetition": 2,
+      "requested_algorithm": "reno",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d7-r2-reno",
+      "started_at_unix_s": 1792733588.4720726,
+      "finished_at_unix_s": 1792733600.0094035,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d7-r2-reno_iperf.pendc.com_5201/tcp-samples.csv",
+      "actual_algorithm": "reno"
+    },
+    {
+      "destination": "iperf.pendc.com:5201",
+      "repetition": 2,
+      "requested_algorithm": "cubic",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d7-r2-cubic",
+      "started_at_unix_s": 1792733602.0123641,
+      "finished_at_unix_s": 1792733613.559325,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d7-r2-cubic_iperf.pendc.com_5201/tcp-samples.csv",
+      "actual_algorithm": "cubic"
+    },
+    {
+      "destination": "iperf.pendc.com:5201",
+      "repetition": 2,
+      "requested_algorithm": "bbr",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d7-r2-bbr",
+      "started_at_unix_s": 1792733615.5630078,
+      "finished_at_unix_s": 1792733627.0823236,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d7-r2-bbr_iperf.pendc.com_5201/tcp-samples.csv",
+      "actual_algorithm": "bbr"
+    },
+    {
+      "destination": "iperf.pendc.com:5201",
+      "repetition": 3,
+      "requested_algorithm": "reno",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d7-r3-reno",
+      "started_at_unix_s": 1792733629.0841808,
+      "finished_at_unix_s": 1792733640.7771127,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d7-r3-reno_iperf.pendc.com_5201/tcp-samples.csv",
+      "actual_algorithm": "reno"
+    },
+    {
+      "destination": "iperf.pendc.com:5201",
+      "repetition": 3,
+      "requested_algorithm": "cubic",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d7-r3-cubic",
+      "started_at_unix_s": 1792733642.7801855,
+      "finished_at_unix_s": 1792733654.3177426,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d7-r3-cubic_iperf.pendc.com_5201/tcp-samples.csv",
+      "actual_algorithm": "cubic"
+    },
+    {
+      "destination": "iperf.pendc.com:5201",
+      "repetition": 3,
+      "requested_algorithm": "bbr",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d7-r3-bbr",
+      "started_at_unix_s": 1792733656.321448,
+      "finished_at_unix_s": 1792733667.9519389,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d7-r3-bbr_iperf.pendc.com_5201/tcp-samples.csv",
+      "actual_algorithm": "bbr"
+    },
+    {
+      "destination": "iperf.pendc.com:5201",
+      "repetition": 3,
+      "requested_algorithm": "a3_cc",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d7-r3-a3_cc",
+      "started_at_unix_s": 1792733669.9539292,
+      "finished_at_unix_s": 1792733681.5607378,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d7-r3-a3_cc_iperf.pendc.com_5201/tcp-samples.csv",
+      "actual_algorithm": "a3_cc"
+    },
+    {
+      "destination": "96.45.41.167:30001",
+      "repetition": 1,
+      "requested_algorithm": "a3_cc",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d8-r1-a3_cc",
+      "started_at_unix_s": 1792733683.5653427,
+      "finished_at_unix_s": 1792733694.3695724,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d8-r1-a3_cc_96.45.41.167_30001/tcp-samples.csv",
+      "actual_algorithm": "a3_cc"
+    },
+    {
+      "destination": "96.45.41.167:30001",
+      "repetition": 1,
+      "requested_algorithm": "reno",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d8-r1-reno",
+      "started_at_unix_s": 1792733696.3712838,
+      "finished_at_unix_s": 1792733707.1802838,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d8-r1-reno_96.45.41.167_30001/tcp-samples.csv",
+      "actual_algorithm": "reno"
+    },
+    {
+      "destination": "96.45.41.167:30001",
+      "repetition": 1,
+      "requested_algorithm": "cubic",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d8-r1-cubic",
+      "started_at_unix_s": 1792733709.182163,
+      "finished_at_unix_s": 1792733720.0144238,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d8-r1-cubic_96.45.41.167_30001/tcp-samples.csv",
+      "actual_algorithm": "cubic"
+    },
+    {
+      "destination": "96.45.41.167:30001",
+      "repetition": 1,
+      "requested_algorithm": "bbr",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d8-r1-bbr",
+      "started_at_unix_s": 1792733722.0165567,
+      "finished_at_unix_s": 1792733732.8271253,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d8-r1-bbr_96.45.41.167_30001/tcp-samples.csv",
+      "actual_algorithm": "bbr"
+    },
+    {
+      "destination": "96.45.41.167:30001",
+      "repetition": 2,
+      "requested_algorithm": "reno",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d8-r2-reno",
+      "started_at_unix_s": 1792733734.8291917,
+      "finished_at_unix_s": 1792733745.6864882,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d8-r2-reno_96.45.41.167_30001/tcp-samples.csv",
+      "actual_algorithm": "reno"
+    },
+    {
+      "destination": "96.45.41.167:30001",
+      "repetition": 2,
+      "requested_algorithm": "cubic",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d8-r2-cubic",
+      "started_at_unix_s": 1792733747.6886146,
+      "finished_at_unix_s": 1792733758.5057986,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d8-r2-cubic_96.45.41.167_30001/tcp-samples.csv",
+      "actual_algorithm": "cubic"
+    },
+    {
+      "destination": "96.45.41.167:30001",
+      "repetition": 2,
+      "requested_algorithm": "bbr",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d8-r2-bbr",
+      "started_at_unix_s": 1792733760.5086517,
+      "finished_at_unix_s": 1792733771.345824,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d8-r2-bbr_96.45.41.167_30001/tcp-samples.csv",
+      "actual_algorithm": "bbr"
+    },
+    {
+      "destination": "96.45.41.167:30001",
+      "repetition": 2,
+      "requested_algorithm": "a3_cc",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d8-r2-a3_cc",
+      "started_at_unix_s": 1792733773.3483293,
+      "finished_at_unix_s": 1792733784.1603484,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d8-r2-a3_cc_96.45.41.167_30001/tcp-samples.csv",
+      "actual_algorithm": "a3_cc"
+    },
+    {
+      "destination": "96.45.41.167:30001",
+      "repetition": 3,
+      "requested_algorithm": "cubic",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d8-r3-cubic",
+      "started_at_unix_s": 1792733786.1623003,
+      "finished_at_unix_s": 1792733796.9732091,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d8-r3-cubic_96.45.41.167_30001/tcp-samples.csv",
+      "actual_algorithm": "cubic"
+    },
+    {
+      "destination": "96.45.41.167:30001",
+      "repetition": 3,
+      "requested_algorithm": "bbr",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d8-r3-bbr",
+      "started_at_unix_s": 1792733798.976272,
+      "finished_at_unix_s": 1792733809.8241844,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d8-r3-bbr_96.45.41.167_30001/tcp-samples.csv",
+      "actual_algorithm": "bbr"
+    },
+    {
+      "destination": "96.45.41.167:30001",
+      "repetition": 3,
+      "requested_algorithm": "a3_cc",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d8-r3-a3_cc",
+      "started_at_unix_s": 1792733811.8261244,
+      "finished_at_unix_s": 1792733822.6508534,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d8-r3-a3_cc_96.45.41.167_30001/tcp-samples.csv",
+      "actual_algorithm": "a3_cc"
+    },
+    {
+      "destination": "96.45.41.167:30001",
+      "repetition": 3,
+      "requested_algorithm": "reno",
+      "status": "ok",
+      "run_id": "step10-final-20261023T051713Z-d8-r3-reno",
+      "started_at_unix_s": 1792733824.6548452,
+      "finished_at_unix_s": 1792733835.4831858,
+      "csv": "tcp-traces/step10-final-20261023T051713Z-d8-r3-reno_96.45.41.167_30001/tcp-samples.csv",
+      "actual_algorithm": "reno"
+    }
+  ],
+  "complete": true
+}

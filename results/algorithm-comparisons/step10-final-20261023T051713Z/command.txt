@@ -1,0 +1,2 @@
+Working directory: assignment3
+/home/milosz/dev/CS422_assignment_2/.venv/bin/python -u main.py compare -s iperf3-servers.csv --algorithms cubic reno bbr a3_cc -t 10 -g 0.2 -c 3 -r 3 -a 3 --seed 422 --pause 2 --run-id step10-final-20261023T051713Z

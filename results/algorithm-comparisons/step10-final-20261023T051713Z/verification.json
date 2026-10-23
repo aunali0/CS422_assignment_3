@@ -1,0 +1,47 @@
+{
+  "data_checks_passed": true,
+  "collection_target_met": true,
+  "successful_tests": 75,
+  "failed_tests": 21,
+  "matched_destinations": [
+    "dal.speedtest.clouvider.net:5200",
+    "185.152.66.67:5201",
+    "96.45.41.167:30001"
+  ],
+  "retained_tests": 36,
+  "samples_checked": 3750,
+  "samples_per_run_min": 50,
+  "samples_per_run_max": 50,
+  "duration_min_s": 10.000132,
+  "duration_max_s": 10.001154,
+  "zero_goodput_samples": 0,
+  "largest_sample_rate_rounding_difference_mbps": 0.0007323270074266475,
+  "checks": [
+    "actual algorithms and settings",
+    "complete matched groups",
+    "saved row and metadata identity",
+    "finite times and rates",
+    "successive byte/retransmission counters",
+    "sample timing and goodput with CSV rounding",
+    "positive cwnd, RTT and MSS; established socket state",
+    "per-run statistics against raw data",
+    "aggregate means and sample standard deviations",
+    "required PDF artifacts"
+  ],
+  "attempts": 96,
+  "candidates_tried": 8,
+  "partial_successful_tests": 39,
+  "retained_samples": 1800,
+  "process_exit_code": 0,
+  "plots_visually_reviewed": true,
+  "protocol_failure_counts": {
+    "ACCESS_DENIED": 17,
+    "TimeoutError": 4
+  },
+  "deterministic_checks": {
+    "python_tests": 12,
+    "c_test_groups": 23
+  },
+  "system_default_algorithm_unchanged": true,
+  "source_and_build_artifact_checksums_match": true
+}

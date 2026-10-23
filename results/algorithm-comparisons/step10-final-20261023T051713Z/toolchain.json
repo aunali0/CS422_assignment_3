@@ -1,0 +1,6 @@
+{
+  "clang": "Ubuntu clang version 21.1.8 (6ubuntu1)",
+  "cc": "cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+  "libbpf": "1.6.3",
+  "bpftool": "bpftool v7.7.0"
+}

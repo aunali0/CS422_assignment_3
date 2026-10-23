@@ -1,0 +1,1 @@
+.venv/bin/python main.py test -s dal.speedtest.clouvider.net -p 5200 --algorithm a3_cc -t 10 -g 0.2 -i 2 -o assignment3/results --run-id step8-smoke-20261023T042549Z

@@ -1,0 +1,11 @@
+[project]
+name = "cs422-assignment-3"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.9,<4",
+    "pydantic==2.14.1",
+]
+
+[dependency-groups]
+dev = []
