@@ -69,25 +69,37 @@ The saved results include [throughput and RTT statistics with sample standard de
 [time-series plots](results/algorithm-comparisons/step10-final-20261023T051713Z/plots/algorithm-metrics-over-time.pdf),
 and [scatter plots](results/algorithm-comparisons/step10-final-20261023T051713Z/plots/algorithm-metrics-vs-goodput.pdf).
 Both figures use Dallas as the common representative destination.
-[Verification notes](results/algorithm-comparisons/step10-final-20261023T051713Z/verification-notes.md)
-link the raw data, exact command, test order, failures, and toolchain records.
+The [manifest](results/algorithm-comparisons/step10-final-20261023T051713Z/manifest.json)
+records settings, test order, and failures; `tcp-traces/` in the same run directory
+contains raw samples and metadata. The [combined PDF](results/algorithm-comparisons/step10-final-20261023T051713Z/reports/algorithm-comparison-report.pdf)
+includes the statistics and both figures.
 
-## Validation and requirements
+## Requirements and reproduction
 
 The controller was built and loaded on Linux 6.18.33.2 under WSL2. Requirements
 include kernel BTF and eBPF TCP struct-ops support, BPF-capable Clang (`clang-21`
 by default), bpftool, libbpf development files, and Python 3.12+.
 
-All 23 C test groups and 12 Python tests passed. Local verification covered
-registration, socket readback, removal, and signal cleanup. Saved measurements
-passed counter, timing, and statistics checks. Every possible kernel recovery
-sequence remains unverified.
+The [toolchain record](results/algorithm-comparisons/step10-final-20261023T051713Z/toolchain.json)
+contains the compiler, bpftool, and libbpf versions. From the repository root:
 
-`uv sync --locked` installs Python dependencies; `make all test` builds the
-controller and runs C checks. `sudo ./verify.sh` checks loading without server
-traffic, while `sudo ./loader` keeps the controller registered. Python exposes
-`test`, `compare`, and offline `analyze` commands through `main.py`, with outputs
-under `results/` and no silent algorithm substitution.
+```sh
+uv sync --locked
+make all
+sudo ./loader
+```
+
+Keep the loader running and start the comparison in another terminal:
+
+```sh
+uv run python main.py compare -s iperf3-servers.csv \
+  --algorithms cubic reno bbr a3_cc -t 10 -g 0.2 \
+  -c 3 -r 3 -a 3 --seed 422 --pause 2
+```
+
+All four algorithms must be available. Outputs go under
+`results/algorithm-comparisons/`. Existing reports can be rebuilt without transfers
+using `uv run python main.py analyze --manifest PATH_TO_MANIFEST`.
 
 AI assistance was used for implementation, tests, automation, plots, and draft
 text.

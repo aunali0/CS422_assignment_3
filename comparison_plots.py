@@ -259,8 +259,7 @@ def build_report(manifest, runs, out: Path):
         "server limits constant. Small differences relative to run variability do not establish "
         "an advantage. These single-flow tests do not establish fairness or convergence.",
         "AI assistance: an AI coding assistant helped implement the controller, experiment "
-        "automation, tests, plots, and draft explanatory text. The team must review and explain "
-        "the implementation and observed differences in the final report.",
+        "automation, tests, plots, and draft explanatory text.",
     ]
     title = "Assignment 3: congestion control comparison"
     (reports_dir / "algorithm-comparison-report.md").write_text(
