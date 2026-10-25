@@ -1,8 +1,8 @@
 # Q3(b): RTT, goodput, and loss based window control
 
-This is the selected proposal for Assignment 2, Question 3(b), and the starting
-point for Assignment 3. It has not been implemented or evaluated. The saved
-experiments compare CUBIC, Reno, and BBR; they do not test this controller.
+This design was developed for Assignment 2, Question 3(b), and implemented as
+`a3_cc` in Assignment 3. The Assignment 2 measurements motivated its rules;
+the Assignment 3 experiments compare it with CUBIC, Reno, and BBR.
 
 ## Idea
 
@@ -15,7 +15,8 @@ Use three signals with clear roles:
 The measurements motivate this combination. Dallas showed that a much larger
 window did not necessarily increase throughput. Netfiber had a slow run with many
 retransmissions. The IP destination had a brief stall with a large RTT increase.
-These observations motivate the rules, but do not prove that they will perform well.
+These observations motivated the rules; they do not establish an advantage over
+the baseline algorithms.
 
 ## State and measurements
 
@@ -23,7 +24,8 @@ Start with an initial window of 10 segments, subject to the TCP stack's limits.
 Start in slow start, with the slow-start threshold initially unlimited. Keep the
 lowest valid RTT measured since connecting and the previous eligible interval's
 goodput. Goodput is newly acknowledged application bytes divided by actual elapsed
-seconds. Use the socket's smoothed RTT for window decisions; use seconds consistently.
+time, expressed in bytes/s. Window decisions use the socket's smoothed RTT;
+RTT comparisons use consistent time units.
 
 Make one normal window decision per completed RTT with new ACK progress. During
 recovery, leave sending and retransmissions to Linux. Also skip normal decisions
@@ -61,26 +63,25 @@ Once per RTT with new ACK progress, outside recovery:
     previous_goodput = goodput; finish interval
 ```
 
-The normal decision rule does not replace the stack's timeout window, which can
-be one segment. The kernel implementation must map loss and timeout handling to
-callbacks without requesting two reductions for the same event. ACK accounting
-must count newly acknowledged data rather than the number of ACK messages.
+Linux handles timeout recovery and can reduce the window to one segment. The
+controller supplies the loss threshold and resets interval history without applying
+a second recovery reduction. ACK accounting counts newly acknowledged segments
+rather than ACK messages.
 
 ## Choices and limitations
 
 The 10% and 25% delay thresholds leave a range where the sender holds its window.
-The 10% delay reduction is milder than the loss response. These are initial values
-for experiments, not tuned settings. The normal update should increase by at most
-one segment per RTT in congestion avoidance.
+The 10% delay reduction is milder than the loss response. These thresholds are
+heuristics, not tuned settings. Congestion avoidance increases the window by at
+most one segment per eligible RTT.
 
 The delay and throughput decisions need only a minimum RTT and the previous
 eligible interval's goodput. The minimum cannot adapt upward after a route change.
 One-interval goodput comparisons can be noisy, and a single low RTT can make the
-baseline too optimistic. These are limitations to evaluate.
+baseline too optimistic.
 
 With similar RTTs and a shared bottleneck, additive growth and loss reductions
 may help flows share bandwidth. Flows with shorter RTTs update more often, and
 this delay-sensitive controller may yield to Reno or CUBIC. Repeated increases
-and reductions may produce oscillation; neither fairness nor convergence has
-been demonstrated. Compare throughput, RTT, retransmissions, and recovery behavior
-against the three baselines before making performance claims.
+and reductions may produce oscillation. The saved single-flow experiments do not
+establish fairness or convergence between competing flows.

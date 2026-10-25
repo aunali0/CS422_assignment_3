@@ -5,16 +5,11 @@
 # buffer and its missing trailing fields decode as None instead of raising, while a newer
 # kernel returns a longer buffer whose unknown tail is ignored. RunMetadata.tcp_info_bytes
 # records how many bytes the kernel actually wrote, so a reader can tell which columns were
-# available. The host kernel for these measurements (6.18.54.1-microsoft-standard-WSL2)
-# returns 280 bytes -- 32 bytes of fields newer than this table, which are not decoded.
+# available. Each saved run records its host kernel and returned structure length;
+# fields beyond this prefix are not decoded.
 #
 # On x86-64 every field below already sits at its natural alignment, so the struct has no
 # interior padding and a packed ("=") decode reproduces the kernel layout exactly.
-#
-# Verified on the host kernel by decoding a live socket and comparing every field against
-# `ss -ti` for the same socket (rtt/rttvar, mss, pmtu, cwnd, ssthresh, bytes_acked,
-# bytes_sent, segs_out, data_segs_out, delivered, min_rtt, busy_time, retrans/total_retrans,
-# rcv_space, rcv_ssthresh and snd_wnd all matched).
 
 import socket
 import struct
