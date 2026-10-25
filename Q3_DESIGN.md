@@ -4,6 +4,8 @@ This design was developed for Assignment 2, Question 3(b), and implemented as
 `a3_cc` in Assignment 3. The Assignment 2 measurements motivated its rules;
 the Assignment 3 experiments compare it with CUBIC, Reno, and BBR.
 
+AI tools helped develop and simplify this design and refine its explanation.
+
 ## Idea
 
 Use three signals with clear roles:

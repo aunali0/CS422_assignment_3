@@ -101,5 +101,8 @@ All four algorithms must be available. Outputs go under
 `results/algorithm-comparisons/`. Existing reports can be rebuilt without transfers
 using `uv run python main.py analyze --manifest PATH_TO_MANIFEST`.
 
-AI assistance was used for implementation, tests, automation, plots, and draft
-text.
+## AI acknowledgement
+
+We used AI tools to generate and revise the majority of the controller, loader,
+Python experiment code, tests, and plotting/reporting code, and to help refine
+the design, analysis, and explanations.

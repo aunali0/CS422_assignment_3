@@ -32,4 +32,4 @@ dal.speedtest.clouvider.net:5200 | a3_cc | 3 runs: goodput 60.438 ± 28.944 Mbit
 
 Limitations: sequential public-server tests cannot hold routes, cross-traffic, or server limits constant. Small differences relative to run variability do not establish an advantage. These single-flow tests do not establish fairness or convergence.
 
-AI assistance: an AI coding assistant helped implement the controller, experiment automation, tests, plots, and draft explanatory text.
+AI assistance: we used AI tools to generate and revise the majority of the controller, loader, Python experiment code, tests, and plotting/reporting code, and to help refine the design, analysis, and explanations.
